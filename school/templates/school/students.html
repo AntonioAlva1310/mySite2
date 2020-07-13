@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Students Filtered</title>
+</head>
+<body>
+<h1>Students List</h1>
+
+ {% if data %}
+    <ul>
+    {% for student in data %}
+      
+         <li>nombre: {{ student.name }} </li>
+      
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No Students are available.</p>
+{% endif %} 
+</body>
+</html>

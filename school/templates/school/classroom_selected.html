@@ -1,0 +1,19 @@
+<head>
+    <meta charset="UTF-8">
+    <title>Clasroom</title>
+</head>
+<body>
+
+ {% if classroom_selected %}
+    
+    <h1>{{ classroom_selected.subject_of_study}}</h1>
+     {% for student in students_by_classroom %}
+         <ul>
+           <li>{{student.name}}</li>
+         </ul>
+     {% endfor %}
+{% else %}
+    <p>No Clasroom are available.</p>
+{% endif %} 
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>clasrooms</title>
+</head>
+<body>
+<h1>Clasrooms Lists</h1>
+ {% if data %}
+    <ul>
+    {% for clasroom in data %}
+    {% comment %} <li><a href="/school/{{ clasroom.id }}/">{{ clasroom.subject_of_study }}</a></li> {% endcomment %}
+     <li><a href="/school/classroom_selected/{{ clasroom.id }}/">{{ clasroom.subject_of_study }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No clasrooms are available.</p>
+{% endif %} 
+</body>
+</html>
